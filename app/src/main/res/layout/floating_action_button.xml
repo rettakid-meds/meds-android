@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/floating_action_button"
+    android:layout_width="@dimen/floating_action_button"
+    android:layout_height="@dimen/floating_action_button"
+    android:background="@drawable/icon_circle"
+    android:layout_marginEnd="@dimen/margin"
+    android:elevation="@dimen/level_1_elevation" >
+
+    <ImageView
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/ic_event_white_24dp"
+        android:layout_margin="16dp"/>
+
+</RelativeLayout>

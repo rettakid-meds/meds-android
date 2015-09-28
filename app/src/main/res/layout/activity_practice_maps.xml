@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+
+
+    <include
+        android:id="@+id/map"
+        android:layout_below="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/map" />
+
+    <include
+        android:id="@+id/progress_view"
+        layout="@layout/progress_bar"
+        android:layout_below="@+id/tool_bar"
+        android:layout_height="@dimen/progress_view_height"
+        android:layout_width="match_parent" />
+
+</RelativeLayout>

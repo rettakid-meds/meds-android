@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="android:textColorPrimary">@color/color_text_primary</item>
+        <item name="android:windowBackground">@color/color_window_background</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+    </style>
+
+    <!--fonts-->
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <!-- FAB Style -->
+
+    <style name="LightFloatingActionButtonIcon" >
+        <item name="lmd_state">@xml/fab_icon_states</item>
+        <item name="lmd_curState">0</item>
+        <item name="lmd_padding">2dp</item>
+        <item name="lmd_animDuration">400</item>
+        <item name="lmd_interpolator">@android:anim/accelerate_decelerate_interpolator</item>
+        <item name="lmd_strokeSize">3dp</item>
+        <item name="lmd_strokeColor">#FFFFFFFF</item>
+        <item name="lmd_strokeCap">butt</item>
+        <item name="lmd_strokeJoin">miter</item>
+        <item name="lmd_clockwise">true</item>
+    </style>
+
+    <style name="LightFABIcon" parent="Material.Widget.FloatingActionButton.Light">
+        <item name="rd_rippleColor">#33000000</item>
+        <item name="fab_backgroundColor">@color/color_primary</item>
+    </style>
+
+    <style name="LightFABLine" parent="Material.Widget.FloatingActionButton.Light">
+        <item name="rd_rippleColor">#33000000</item>
+        <item name="fab_backgroundColor">@color/color_primary</item>
+        <item name="fab_iconLineMorphing">@style/LightFloatingActionButtonIcon</item>
+    </style>
+
+    <style name="LightFAB" parent="Material.Drawable.Ripple.Touch.Light">
+        <item name="fab_backgroundColor">#FFDFDFDF</item>
+        <item name="fab_elevation">4dp</item>
+        <item name="fab_iconLineMorphing">@style/LightFloatingActionButtonIcon</item>
+        <item name="rd_delayClick">none</item>
+    </style>
+
+    <style name="LightFABColor" parent="Material.Drawable.Ripple.Touch.Light">
+        <item name="rd_rippleColor">#33000000</item>
+        <item name="fab_backgroundColor">@color/color_primary</item>
+        <item name="fab_elevation">4dp</item>
+        <item name="fab_iconLineMorphing">@style/LightFloatingActionButtonIcon</item>
+        <item name="rd_delayClick">untilRelease</item>
+    </style>
+
+    <style name="LightFABWave" parent="Material.Drawable.Ripple.Wave.Light">
+        <item name="fab_backgroundColor">#FFDFDFDF</item>
+        <item name="fab_elevation">4dp</item>
+        <item name="fab_iconLineMorphing">@style/LightFloatingActionButtonIcon</item>
+        <item name="rd_delayClick">none</item>
+    </style>
+
+    <style name="LightFABWaveColor" parent="Material.Drawable.Ripple.Wave.Light">
+        <item name="rd_rippleColor">#33000000</item>
+        <item name="fab_backgroundColor">@color/color_primary</item>
+        <item name="fab_elevation">4dp</item>
+        <item name="fab_iconLineMorphing">@style/LightFloatingActionButtonIcon</item>
+        <item name="rd_delayClick">afterRelease</item>
+    </style>
+
+</resources>
