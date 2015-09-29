@@ -39,8 +39,13 @@ public class DoctorClient extends BaseClient   {
     }
 
 
-    public PrescriptionListDto getPrescriptions(Long prescriptionId)  {
-        String url = createUrl("/{id}/prescriptions");
+    public DoctorPracticeListDto getDoctorPracticeDoctors(Long medsDoctorPracticeId)  {
+        String url = createUrl("/{id}/doctors");
+        return getRestTemplate().getForObject(url, DoctorPracticeListDto.class,medsDoctorPracticeId);
+    }
+
+    public PrescriptionListDto getPrescriptionDoctors(Long prescriptionId)  {
+        String url = createUrl("/{id}/doctors");
         return getRestTemplate().getForObject(url, PrescriptionListDto.class,prescriptionId);
     }
 

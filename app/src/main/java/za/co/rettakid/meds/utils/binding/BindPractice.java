@@ -15,8 +15,11 @@ public class BindPractice {
             practiceVo.setRealLongitude(practiceDto.getLongitude());
             practiceVo.setRealLatitude(practiceDto.getLatitude());
             practiceVo.setRealAddress(practiceDto.getAddress());
+            practiceVo.setRealTradingDay(BindTradingDay.bindTradingDay(practiceDto.getTradingDay()));
             practiceVo.setRealPhone(practiceDto.getPhone());
             practiceVo.setRealFee(practiceDto.getFee());
+            practiceVo.setRealImage(BindImage.bindImage(practiceDto.getImage()));
+            practiceVo.setRealBio(BindDataContent.bindDataContent(practiceDto.getBio()));
         }
         return practiceVo;
     }
@@ -31,8 +34,11 @@ public class BindPractice {
             practiceDto.setLongitude(practiceVo.getRealLongitude());
             practiceDto.setLatitude(practiceVo.getRealLatitude());
             practiceDto.setAddress(practiceVo.getRealAddress());
+            practiceDto.setTradingDay(BindTradingDay.bindTradingDay(practiceVo.getRealTradingDay()));
             practiceDto.setPhone(practiceVo.getRealPhone());
             practiceDto.setFee(practiceVo.getRealFee());
+            practiceDto.setImage(BindImage.bindImage(practiceVo.getRealImage()));
+            practiceDto.setBio(BindDataContent.bindDataContent(practiceVo.getRealBio()));
         }
         return practiceDto;
     }

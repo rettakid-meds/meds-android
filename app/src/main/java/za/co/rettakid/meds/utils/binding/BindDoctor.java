@@ -10,8 +10,9 @@ public class BindDoctor {
         if (doctorDto != null)    {
             doctorVo = new DoctorVo();
             doctorVo.setRealDoctorId(doctorDto.getDoctorId());
-            doctorVo.setRealPractice(BindPractice.bindPractice(doctorDto.getPractice()));
             doctorVo.setRealUser(BindUser.bindUser(doctorDto.getUser()));
+            doctorVo.setRealImage(BindImage.bindImage(doctorDto.getImage()));
+            doctorVo.setRealBio(BindDataContent.bindDataContent(doctorDto.getBio()));
         }
         return doctorVo;
     }
@@ -21,8 +22,9 @@ public class BindDoctor {
         if (doctorVo != null)    {
             doctorDto = new DoctorDto();
             doctorDto.setDoctorId(doctorVo.getRealDoctorId());
-            doctorDto.setPractice(BindPractice.bindPractice(doctorVo.getRealPractice()));
             doctorDto.setUser(BindUser.bindUser(doctorVo.getRealUser()));
+            doctorDto.setImage(BindImage.bindImage(doctorVo.getRealImage()));
+            doctorDto.setBio(BindDataContent.bindDataContent(doctorVo.getRealBio()));
         }
         return doctorDto;
     }

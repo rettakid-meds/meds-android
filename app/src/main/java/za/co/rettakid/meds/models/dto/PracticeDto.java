@@ -27,11 +27,20 @@ public class PracticeDto implements Serializable    {
     @Element(name = "address")
     private String address;
 
+    @Element(name = "tradingdaydto")
+    private TradingDayDto tradingDay;
+
     @Element(name = "phone" , required = false)
     private String phone;
 
     @Element(name = "fee" , required = false)
     private Float fee;
+
+    @Element(name = "imagedto")
+    private ImageDto image;
+
+    @Element(name = "biodto")
+    private DataContentDto bio;
 
 
     public Long getPracticeId()   {
@@ -82,6 +91,14 @@ public class PracticeDto implements Serializable    {
         this.address = address;
     }
 
+    public TradingDayDto getTradingDay()   {
+        return this.tradingDay;
+    }
+
+    public void setTradingDay(TradingDayDto tradingDay)   {
+        this.tradingDay = tradingDay;
+    }
+
     public String getPhone()   {
         return this.phone;
     }
@@ -96,6 +113,22 @@ public class PracticeDto implements Serializable    {
 
     public void setFee(Float fee)   {
         this.fee = fee;
+    }
+
+    public ImageDto getImage()   {
+        return this.image;
+    }
+
+    public void setImage(ImageDto image)   {
+        this.image = image;
+    }
+
+    public DataContentDto getBio()   {
+        return this.bio;
+    }
+
+    public void setBio(DataContentDto bio)   {
+        this.bio = bio;
     }
 
 }

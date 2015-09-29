@@ -39,23 +39,23 @@ public class UserClient extends BaseClient   {
     }
 
 
-    public UserDeviceListDto getUserDevices(Long userDevicesId)  {
-        String url = createUrl("/{id}/userdevices");
+    public UserDeviceListDto getUserDeviceUsers(Long userDevicesId)  {
+        String url = createUrl("/{id}/users");
         return getRestTemplate().getForObject(url, UserDeviceListDto.class,userDevicesId);
     }
 
-    public DoctorListDto getDoctors(Long doctorId)  {
-        String url = createUrl("/{id}/doctors");
+    public DoctorListDto getDoctorUsers(Long doctorId)  {
+        String url = createUrl("/{id}/users");
         return getRestTemplate().getForObject(url, DoctorListDto.class,doctorId);
     }
 
-    public AppointmentListDto getAppointments(Long appointmentId)  {
-        String url = createUrl("/{id}/appointments");
+    public AppointmentListDto getAppointmentUsers(Long appointmentId)  {
+        String url = createUrl("/{id}/users");
         return getRestTemplate().getForObject(url, AppointmentListDto.class,appointmentId);
     }
 
-    public PrescriptionListDto getPrescriptions(Long prescriptionId)  {
-        String url = createUrl("/{id}/prescriptions");
+    public PrescriptionListDto getPrescriptionUsers(Long prescriptionId)  {
+        String url = createUrl("/{id}/users");
         return getRestTemplate().getForObject(url, PrescriptionListDto.class,prescriptionId);
     }
 

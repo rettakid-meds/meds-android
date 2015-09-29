@@ -15,8 +15,8 @@ public class UserDeviceDto implements Serializable    {
     @Element(name = "userdto")
     private UserDto user;
 
-    @Element(name = "devicestypedto")
-    private DevicesTypeDto devicesType;
+    @Element(name = "typedto")
+    private DevicesTypeDto type;
 
     @Element(name = "name")
     private String name;
@@ -41,12 +41,12 @@ public class UserDeviceDto implements Serializable    {
         this.user = user;
     }
 
-    public DevicesTypeDto getDevicesType()   {
-        return this.devicesType;
+    public DevicesTypeDto getType()   {
+        return this.type;
     }
 
-    public void setDevicesType(DevicesTypeDto devicesType)   {
-        this.devicesType = devicesType;
+    public void setType(DevicesTypeDto type)   {
+        this.type = type;
     }
 
     public String getName()   {

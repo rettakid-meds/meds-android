@@ -6,7 +6,6 @@ import android.util.Log;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import za.co.rettakid.meds.BR;
 
 public class PrescriptionVo extends BaseObservable   {
@@ -15,6 +14,7 @@ public class PrescriptionVo extends BaseObservable   {
     private AppointmentVo appointment;
     private DoctorVo doctor;
     private UserVo user;
+    private FileVo file;
     private Date effFrm;
     private Date effTo;
 
@@ -53,6 +53,15 @@ public class PrescriptionVo extends BaseObservable   {
     public void setUser(UserVo user)   {
         this.user = user;
         notifyPropertyChanged(BR.user);
+    }
+    @Bindable
+    public FileVo getFile()   {
+        return this.file;
+    }
+
+    public void setFile(FileVo file)   {
+        this.file = file;
+        notifyPropertyChanged(BR.file);
     }
     @Bindable
     public String getEffFrm()   {
@@ -114,6 +123,13 @@ public class PrescriptionVo extends BaseObservable   {
 
     public void setRealUser(UserVo user)   {
         this.user = user;
+    }
+    public FileVo getRealFile()   {
+        return this.file;
+    }
+
+    public void setRealFile(FileVo file)   {
+        this.file = file;
     }
     public Date getRealEffFrm()   {
         return this.effFrm;

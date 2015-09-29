@@ -5,14 +5,13 @@ import android.databinding.Bindable;
 import android.util.Log;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-
 import za.co.rettakid.meds.BR;
 
 public class UserDeviceVo extends BaseObservable   {
 
     private Long userDevicesId;
     private UserVo user;
-    private DevicesTypeVo devicesType;
+    private DevicesTypeVo type;
     private String name;
     private String devicePushId;
 
@@ -35,13 +34,13 @@ public class UserDeviceVo extends BaseObservable   {
         notifyPropertyChanged(BR.user);
     }
     @Bindable
-    public DevicesTypeVo getDevicesType()   {
-        return this.devicesType;
+    public DevicesTypeVo getType()   {
+        return this.type;
     }
 
-    public void setDevicesType(DevicesTypeVo devicesType)   {
-        this.devicesType = devicesType;
-        notifyPropertyChanged(BR.devicesType);
+    public void setType(DevicesTypeVo type)   {
+        this.type = type;
+        notifyPropertyChanged(BR.type);
     }
     @Bindable
     public String getName()   {
@@ -78,12 +77,12 @@ public class UserDeviceVo extends BaseObservable   {
     public void setRealUser(UserVo user)   {
         this.user = user;
     }
-    public DevicesTypeVo getRealDevicesType()   {
-        return this.devicesType;
+    public DevicesTypeVo getRealType()   {
+        return this.type;
     }
 
-    public void setRealDevicesType(DevicesTypeVo devicesType)   {
-        this.devicesType = devicesType;
+    public void setRealType(DevicesTypeVo type)   {
+        this.type = type;
     }
     public String getRealName()   {
         return this.name;

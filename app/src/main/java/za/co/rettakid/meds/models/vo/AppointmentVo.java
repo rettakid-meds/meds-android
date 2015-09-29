@@ -6,7 +6,6 @@ import android.util.Log;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import za.co.rettakid.meds.BR;
 
 public class AppointmentVo extends BaseObservable   {
@@ -14,6 +13,7 @@ public class AppointmentVo extends BaseObservable   {
     private Long appointmentId;
     private PracticeVo practice;
     private UserVo user;
+    private DataContentVo note;
     private Date expectedFrm;
     private Date expectedTo;
     private Date actualFrm;
@@ -45,6 +45,15 @@ public class AppointmentVo extends BaseObservable   {
     public void setUser(UserVo user)   {
         this.user = user;
         notifyPropertyChanged(BR.user);
+    }
+    @Bindable
+    public DataContentVo getNote()   {
+        return this.note;
+    }
+
+    public void setNote(DataContentVo note)   {
+        this.note = note;
+        notifyPropertyChanged(BR.note);
     }
     @Bindable
     public String getExpectedFrm()   {
@@ -129,6 +138,13 @@ public class AppointmentVo extends BaseObservable   {
 
     public void setRealUser(UserVo user)   {
         this.user = user;
+    }
+    public DataContentVo getRealNote()   {
+        return this.note;
+    }
+
+    public void setRealNote(DataContentVo note)   {
+        this.note = note;
     }
     public Date getRealExpectedFrm()   {
         return this.expectedFrm;

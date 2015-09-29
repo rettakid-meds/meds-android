@@ -39,4 +39,19 @@ public class DataContentClient extends BaseClient   {
     }
 
 
+    public PracticeListDto getPracticeBios(Long practiceId)  {
+        String url = createUrl("/{id}/bios");
+        return getRestTemplate().getForObject(url, PracticeListDto.class,practiceId);
+    }
+
+    public DoctorListDto getDoctorBios(Long doctorId)  {
+        String url = createUrl("/{id}/bios");
+        return getRestTemplate().getForObject(url, DoctorListDto.class,doctorId);
+    }
+
+    public AppointmentListDto getAppointmentNotes(Long appointmentId)  {
+        String url = createUrl("/{id}/notes");
+        return getRestTemplate().getForObject(url, AppointmentListDto.class,appointmentId);
+    }
+
 }

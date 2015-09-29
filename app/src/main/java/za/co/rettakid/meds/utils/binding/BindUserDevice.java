@@ -11,7 +11,7 @@ public class BindUserDevice {
             userDeviceVo = new UserDeviceVo();
             userDeviceVo.setRealUserDevicesId(userDeviceDto.getUserDevicesId());
             userDeviceVo.setRealUser(BindUser.bindUser(userDeviceDto.getUser()));
-            userDeviceVo.setRealDevicesType(BindDevicesType.bindDevicesType(userDeviceDto.getDevicesType()));
+            userDeviceVo.setRealType(BindDevicesType.bindDevicesType(userDeviceDto.getType()));
             userDeviceVo.setRealName(userDeviceDto.getName());
             userDeviceVo.setRealDevicePushId(userDeviceDto.getDevicePushId());
         }
@@ -24,7 +24,7 @@ public class BindUserDevice {
             userDeviceDto = new UserDeviceDto();
             userDeviceDto.setUserDevicesId(userDeviceVo.getRealUserDevicesId());
             userDeviceDto.setUser(BindUser.bindUser(userDeviceVo.getRealUser()));
-            userDeviceDto.setDevicesType(BindDevicesType.bindDevicesType(userDeviceVo.getRealDevicesType()));
+            userDeviceDto.setType(BindDevicesType.bindDevicesType(userDeviceVo.getRealType()));
             userDeviceDto.setName(userDeviceVo.getRealName());
             userDeviceDto.setDevicePushId(userDeviceVo.getRealDevicePushId());
         }

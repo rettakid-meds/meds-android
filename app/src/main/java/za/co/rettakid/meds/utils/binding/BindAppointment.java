@@ -12,6 +12,7 @@ public class BindAppointment {
             appointmentVo.setRealAppointmentId(appointmentDto.getAppointmentId());
             appointmentVo.setRealPractice(BindPractice.bindPractice(appointmentDto.getPractice()));
             appointmentVo.setRealUser(BindUser.bindUser(appointmentDto.getUser()));
+            appointmentVo.setRealNote(BindDataContent.bindDataContent(appointmentDto.getNote()));
             appointmentVo.setRealExpectedFrm(appointmentDto.getExpectedFrm());
             appointmentVo.setRealExpectedTo(appointmentDto.getExpectedTo());
             appointmentVo.setRealActualFrm(appointmentDto.getActualFrm());
@@ -27,6 +28,7 @@ public class BindAppointment {
             appointmentDto.setAppointmentId(appointmentVo.getRealAppointmentId());
             appointmentDto.setPractice(BindPractice.bindPractice(appointmentVo.getRealPractice()));
             appointmentDto.setUser(BindUser.bindUser(appointmentVo.getRealUser()));
+            appointmentDto.setNote(BindDataContent.bindDataContent(appointmentVo.getRealNote()));
             appointmentDto.setExpectedFrm(appointmentVo.getRealExpectedFrm());
             appointmentDto.setExpectedTo(appointmentVo.getRealExpectedTo());
             appointmentDto.setActualFrm(appointmentVo.getRealActualFrm());

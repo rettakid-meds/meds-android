@@ -39,8 +39,8 @@ public class DevicesTypeClient extends BaseClient   {
     }
 
 
-    public UserDeviceListDto getUserDevices(Long userDevicesId)  {
-        String url = createUrl("/{id}/userdevices");
+    public UserDeviceListDto getUserDeviceTypes(Long userDevicesId)  {
+        String url = createUrl("/{id}/types");
         return getRestTemplate().getForObject(url, UserDeviceListDto.class,userDevicesId);
     }
 

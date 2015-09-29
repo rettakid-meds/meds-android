@@ -22,6 +22,9 @@ public class PrescriptionDto implements Serializable    {
     @Element(name = "userdto")
     private UserDto user;
 
+    @Element(name = "filedto")
+    private FileDto file;
+
     @Element(name = "efffrm")
     private Date effFrm;
 
@@ -59,6 +62,14 @@ public class PrescriptionDto implements Serializable    {
 
     public void setUser(UserDto user)   {
         this.user = user;
+    }
+
+    public FileDto getFile()   {
+        return this.file;
+    }
+
+    public void setFile(FileDto file)   {
+        this.file = file;
     }
 
     public Date getEffFrm()   {

@@ -39,8 +39,8 @@ public class AppointmentClient extends BaseClient   {
     }
 
 
-    public PrescriptionListDto getPrescriptions(Long prescriptionId)  {
-        String url = createUrl("/{id}/prescriptions");
+    public PrescriptionListDto getPrescriptionAppointments(Long prescriptionId)  {
+        String url = createUrl("/{id}/appointments");
         return getRestTemplate().getForObject(url, PrescriptionListDto.class,prescriptionId);
     }
 

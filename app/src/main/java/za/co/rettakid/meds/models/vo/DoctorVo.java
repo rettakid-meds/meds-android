@@ -5,14 +5,14 @@ import android.databinding.Bindable;
 import android.util.Log;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-
 import za.co.rettakid.meds.BR;
 
 public class DoctorVo extends BaseObservable   {
 
     private Long doctorId;
-    private PracticeVo practice;
     private UserVo user;
+    private ImageVo image;
+    private DataContentVo bio;
 
     @Bindable
     public String getDoctorId()   {
@@ -24,15 +24,6 @@ public class DoctorVo extends BaseObservable   {
         notifyPropertyChanged(BR.doctorId);
     }
     @Bindable
-    public PracticeVo getPractice()   {
-        return this.practice;
-    }
-
-    public void setPractice(PracticeVo practice)   {
-        this.practice = practice;
-        notifyPropertyChanged(BR.practice);
-    }
-    @Bindable
     public UserVo getUser()   {
         return this.user;
     }
@@ -40,6 +31,24 @@ public class DoctorVo extends BaseObservable   {
     public void setUser(UserVo user)   {
         this.user = user;
         notifyPropertyChanged(BR.user);
+    }
+    @Bindable
+    public ImageVo getImage()   {
+        return this.image;
+    }
+
+    public void setImage(ImageVo image)   {
+        this.image = image;
+        notifyPropertyChanged(BR.image);
+    }
+    @Bindable
+    public DataContentVo getBio()   {
+        return this.bio;
+    }
+
+    public void setBio(DataContentVo bio)   {
+        this.bio = bio;
+        notifyPropertyChanged(BR.bio);
     }
 
 /* real getters and setters */
@@ -51,19 +60,26 @@ public class DoctorVo extends BaseObservable   {
     public void setRealDoctorId(Long doctorId)   {
         this.doctorId = doctorId;
     }
-    public PracticeVo getRealPractice()   {
-        return this.practice;
-    }
-
-    public void setRealPractice(PracticeVo practice)   {
-        this.practice = practice;
-    }
     public UserVo getRealUser()   {
         return this.user;
     }
 
     public void setRealUser(UserVo user)   {
         this.user = user;
+    }
+    public ImageVo getRealImage()   {
+        return this.image;
+    }
+
+    public void setRealImage(ImageVo image)   {
+        this.image = image;
+    }
+    public DataContentVo getRealBio()   {
+        return this.bio;
+    }
+
+    public void setRealBio(DataContentVo bio)   {
+        this.bio = bio;
     }
 
 }

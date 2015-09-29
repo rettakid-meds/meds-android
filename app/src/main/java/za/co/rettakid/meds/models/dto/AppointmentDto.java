@@ -19,6 +19,9 @@ public class AppointmentDto implements Serializable    {
     @Element(name = "userdto")
     private UserDto user;
 
+    @Element(name = "notedto" , required = false)
+    private DataContentDto note;
+
     @Element(name = "expectedfrm")
     private Date expectedFrm;
 
@@ -54,6 +57,14 @@ public class AppointmentDto implements Serializable    {
 
     public void setUser(UserDto user)   {
         this.user = user;
+    }
+
+    public DataContentDto getNote()   {
+        return this.note;
+    }
+
+    public void setNote(DataContentDto note)   {
+        this.note = note;
     }
 
     public Date getExpectedFrm()   {

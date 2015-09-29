@@ -5,7 +5,6 @@ import android.databinding.Bindable;
 import android.util.Log;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-
 import za.co.rettakid.meds.BR;
 
 public class PrescriptionItemVo extends BaseObservable   {

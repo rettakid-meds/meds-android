@@ -5,7 +5,6 @@ import android.databinding.Bindable;
 import android.util.Log;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-
 import za.co.rettakid.meds.BR;
 
 public class PracticeVo extends BaseObservable   {
@@ -16,8 +15,11 @@ public class PracticeVo extends BaseObservable   {
     private Float longitude;
     private Float latitude;
     private String address;
+    private TradingDayVo tradingDay;
     private String phone;
     private Float fee;
+    private ImageVo image;
+    private DataContentVo bio;
 
     @Bindable
     public String getPracticeId()   {
@@ -74,6 +76,15 @@ public class PracticeVo extends BaseObservable   {
         notifyPropertyChanged(BR.address);
     }
     @Bindable
+    public TradingDayVo getTradingDay()   {
+        return this.tradingDay;
+    }
+
+    public void setTradingDay(TradingDayVo tradingDay)   {
+        this.tradingDay = tradingDay;
+        notifyPropertyChanged(BR.tradingDay);
+    }
+    @Bindable
     public String getPhone()   {
         return String.valueOf(this.phone);
     }
@@ -90,6 +101,24 @@ public class PracticeVo extends BaseObservable   {
     public void setFee(String fee)   {
         this.fee = Float.parseFloat(fee);
         notifyPropertyChanged(BR.fee);
+    }
+    @Bindable
+    public ImageVo getImage()   {
+        return this.image;
+    }
+
+    public void setImage(ImageVo image)   {
+        this.image = image;
+        notifyPropertyChanged(BR.image);
+    }
+    @Bindable
+    public DataContentVo getBio()   {
+        return this.bio;
+    }
+
+    public void setBio(DataContentVo bio)   {
+        this.bio = bio;
+        notifyPropertyChanged(BR.bio);
     }
 
 /* real getters and setters */
@@ -136,6 +165,13 @@ public class PracticeVo extends BaseObservable   {
     public void setRealAddress(String address)   {
         this.address = address;
     }
+    public TradingDayVo getRealTradingDay()   {
+        return this.tradingDay;
+    }
+
+    public void setRealTradingDay(TradingDayVo tradingDay)   {
+        this.tradingDay = tradingDay;
+    }
     public String getRealPhone()   {
         return this.phone;
     }
@@ -149,6 +185,20 @@ public class PracticeVo extends BaseObservable   {
 
     public void setRealFee(Float fee)   {
         this.fee = fee;
+    }
+    public ImageVo getRealImage()   {
+        return this.image;
+    }
+
+    public void setRealImage(ImageVo image)   {
+        this.image = image;
+    }
+    public DataContentVo getRealBio()   {
+        return this.bio;
+    }
+
+    public void setRealBio(DataContentVo bio)   {
+        this.bio = bio;
     }
 
 }

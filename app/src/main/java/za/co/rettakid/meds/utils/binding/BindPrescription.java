@@ -13,6 +13,7 @@ public class BindPrescription {
             prescriptionVo.setRealAppointment(BindAppointment.bindAppointment(prescriptionDto.getAppointment()));
             prescriptionVo.setRealDoctor(BindDoctor.bindDoctor(prescriptionDto.getDoctor()));
             prescriptionVo.setRealUser(BindUser.bindUser(prescriptionDto.getUser()));
+            prescriptionVo.setRealFile(BindFile.bindFile(prescriptionDto.getFile()));
             prescriptionVo.setRealEffFrm(prescriptionDto.getEffFrm());
             prescriptionVo.setRealEffTo(prescriptionDto.getEffTo());
         }
@@ -27,6 +28,7 @@ public class BindPrescription {
             prescriptionDto.setAppointment(BindAppointment.bindAppointment(prescriptionVo.getRealAppointment()));
             prescriptionDto.setDoctor(BindDoctor.bindDoctor(prescriptionVo.getRealDoctor()));
             prescriptionDto.setUser(BindUser.bindUser(prescriptionVo.getRealUser()));
+            prescriptionDto.setFile(BindFile.bindFile(prescriptionVo.getRealFile()));
             prescriptionDto.setEffFrm(prescriptionVo.getRealEffFrm());
             prescriptionDto.setEffTo(prescriptionVo.getRealEffTo());
         }

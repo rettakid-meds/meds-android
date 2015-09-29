@@ -2,7 +2,6 @@ package za.co.rettakid.meds.view;
 
 import android.content.Intent;
 import android.location.Location;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -108,7 +107,7 @@ public class PracticeMapsActivity extends BaseActivity implements OnMapReadyCall
         MarkerOptions markerOptions = new MarkerOptions()
                 .position(latLng)
                 .title(practiceDto.getName())
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.doctor));
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.placeholder));
         practices.put(map.addMarker(markerOptions), practiceDto);
     }
 

@@ -39,8 +39,8 @@ public class PrescriptionClient extends BaseClient   {
     }
 
 
-    public PrescriptionItemListDto getPrescriptionItems(Long prescriptionItemId)  {
-        String url = createUrl("/{id}/prescriptionitems");
+    public PrescriptionItemListDto getPrescriptionItemPrescriptions(Long prescriptionItemId)  {
+        String url = createUrl("/{id}/prescriptions");
         return getRestTemplate().getForObject(url, PrescriptionItemListDto.class,prescriptionItemId);
     }
 
